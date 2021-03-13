@@ -1,0 +1,30 @@
+input{
+  font-weight: bold;
+  font-size: 20px !important;
+  color: white;
+}
+
+button{
+font-family: 'Open Sans', sans-serif;
+margin-left: 55px;
+margin-top: 50px;
+}
+#addButton{
+  color: black;
+  font-size: 15px;
+  font-weight: normal;
+}
+.waves-effect{
+ background-color: #ffda00;
+ color: black;
+}
+.waves-effect:hover{
+  padding: 0px 40px;
+ background-color: #ffe966;
+ color: black;
+}
+.material-icons{
+  color: white;
+  position:relative;
+  top: 10px;
+}

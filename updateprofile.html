@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Update profile</title>
+  <script type="text/javascript" src="js/updateprofile.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </script>
+  <link rel="stylesheet" href="css/updateprofile.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  <div class="container" background>
+    <br><br>
+    <h1 id="heading" class="center-align">Update Profile</h1>
+    <div class="row">
+      <form class="col s12  z-depth-5" method="post" name="userinfo" onsubmit="return false;">
+
+        <div class=" row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" name="firstname" required>
+            <label class="active" for="firstname">FirstName</label>
+          </div>
+
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" name="lastname">
+            <label class="active" for="lastname">LastName</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input type="email" name="email" autocomplete="off" required>
+            <label class="active" for="email">Email</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock</i>
+            <input type="password" name="password" maxlength="8" required>
+            <label class="active" for="password">Password</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">contact_phone</i>
+            <input type="tel" name="phone" maxlength="11" required>
+            <label class="active" for="phone">Contact No </label>
+          </div>
+
+          <div id="div" class="row center">
+            <input class="waves-effect waves-light btn-large" type="submit" name="submit" value="Update Profile" id="addButton" onclick="validateForm()">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
