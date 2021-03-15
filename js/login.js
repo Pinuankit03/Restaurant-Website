@@ -67,8 +67,8 @@ console.log(localStorage.isLogin);
 
   var userListData = [];
     var loginData = [];
-    $('input[name=email]').val('p@gmail.com');
-    $('input[name=password]').val('1234');
+    // $('input[name=email]').val('p@gmail.com');
+    // $('input[name=password]').val('1234');
 
   if ("userList" in localStorage){
       userListData = JSON.parse(localStorage.getItem("userList"));
