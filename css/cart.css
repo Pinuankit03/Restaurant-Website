@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    );
+  background-color: #131313;
+  background-size: 20px 20px;
+  /* height: 120vh; */
+  overflow-x: hidden;
+}
+/* modal  */
+.opacity-animate {
+  animation: opt-animation4 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opt-animation4 {
+  0% {
+    transform: scale(0) rotate(360deg);
+  }
+  60% {
+    transform: scale(0.8) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.modal h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 900;
+}
+.modal {
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal label {
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal input,
+.modal textarea {
+  font-size: 14px;
+  font-weight: 100;
+  width: 80%;
+  margin: 0 10%;
+}
+.modal .form-group {
+  margin: 15px 0;
+}
+.empty {
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  z-index: 999;
+}
+
+ul li {
+  margin: 5px;
+  padding: 5px 0 2px 5px;
+  border: 1px solid rgb(180, 180, 180);
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+ul li a:hover {
+  color: black;
+}
+ul li img {
+  vertical-align: middle; /* | top | bottom */
+  height: 80px;
+}
+div ul li .product {
+  display: inline-block;
+  vertical-align: middle; /* | top | bottom */
+  margin-left: 3px;
+  padding: 0px;
+  font-size: 21px;
+  font-weight: 700;
+}
+ul li span {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+}
+.number span {
+  cursor: pointer;
+}
+
+.number {
+  margin: 5px 0;
+}
+
+.minus,
+.plus {
+  width: 20px;
+  height: 20px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: 1px solid rgb(153, 153, 153);
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.number input {
+  height: 24px;
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#total {
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+#cost {
+  margin-left: -5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.9);
+}
+.button .place {
+  background: #223f99;
+  color: white;
+}
+.dropdown-menu {
+  width: 300px !important;
+}
+
+.donate {
+  /*padding: 50px*/
+  background-color: #171b24;
+  width: 400px;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1;
+  top: -20px;
+  right: 0;
+  padding-top: 20px;
+}
+
+.donate p {
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.donate h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.denomination {
+  float: left;
+  width: 33%;
+  text-align: center;
+  padding: 13px 0;
+  cursor: pointer;
+  background-color: #171b24;
+  margin: 0 1px 1px 0;
+  transition: background-color 0.2s ease;
+}
+
+.denomination label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.denomination input {
+  left: -10001px;
+  position: absolute;
+}
+
+.denomination-other {
+  width: 99.8%;
+}
+
+.denomination-other input {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  width: inherit;
+  text-align: center;
+  background-color: #171b24;
+  border: none;
+  padding: 19px 0;
+  transition: background-color 0.2s ease;
+}
+
+.denomination-other input:hover {
+  background-color: #223f99;
+}
+
+.denomination-other input:before {
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  content: "$";
+}
+
+.donate-amount .selected,
+.denomination-other input.selected,
+.donate-amount .denomination:hover {
+  background-color: #223f99;
+  border: 0;
+}
+
+.donate-black h2 {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.donate-black h2 span {
+  display: block;
+  float: left;
+  font-size: 16px;
+  padding-top: 7px;
+  margin-right: 20px;
+  text-align: center;
+  width: 30px;
+  height: 35px;
+  background-color: #223f99;
+  border-radius: 50%;
+}
+
+.donate-type label,
+.donate-payment label {
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 30px;
+}
+
+.donate-blue {
+  background-color: #1e252d;
+  padding: 25px;
+}
+
+.donate-black {
+  padding: 25px;
+}
+
+.donate-submit button {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  background-color: #223f99;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 14px 0;
+  margin: 5px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.donate-submit small {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+.card {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  background: #122936 !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #223f99;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+.card::after {
+  content: "Item";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 8em;
+  color: rgb(0, 0, 0, 0.1);
+}
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card .imgBox img {
+  width: 300px;
+  max-width: 100%;
+  transition: 0.5s;
+}
+.card:hover .imgBox img {
+  width: 250px;
+  margin-top: -20px;
+}
+
+.card .contentBx {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.card .contentBx h3 {
+  font-size: 21px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card .contentBx .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.card .contentBx .buy {
+  position: relative;
+  top: 200px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  background: #223f99;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.card:hover .contentBx .buy {
+  top: 0;
+  opacity: 2;
+}
+.card .contentBx .remove {
+  position: relative;
+  top: 200px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  background: #df1818;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.card:hover .contentBx .remove {
+  top: 0;
+  opacity: 2;
+}
+
+.card .inside {
+  z-index: 9;
+  background: #122936;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  border-radius: 0px 0px 200px 200px;
+  transition: all 0.5s, border-radius 2s, top 1s;
+  overflow: hidden;
+}
+
+.card .inside .icon {
+  position: absolute;
+  right: 85px;
+  top: 85px;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card .inside:hover {
+  width: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.card .inside:hover .icon {
+  opacity: 0;
+  right: 15px;
+  top: 15px;
+}
+
+.card .inside:hover .contents {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+
+.card .inside .contents {
+  padding: 5%;
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(-200%);
+  transition: opacity 0.2s, transform 0.8s;
+}
+
+.card .inside .contents h2,
+.card .inside .contents p {
+  color: white;
+}
+
+.card .inside .contents p {
+  font-size: 13px;
+}
