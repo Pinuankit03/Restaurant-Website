@@ -23,6 +23,9 @@ $(document).ready(function() {
 }
 }
 
+$("#changepwd").click(function() {
+  window.location.href = 'changepassword.html';
+});
 
 $("#updateprofile").click(function() {
 var fname = $("#fname").val();
@@ -45,7 +48,6 @@ else {
         userList[i] = user;
         alert ("Profile updated successfully");
         window.location.href = 'home.html';
-         return false;
       }
         break;
     }
